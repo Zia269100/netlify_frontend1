@@ -1,0 +1,49 @@
+:root {
+    --bg-light: #fdf6ec;
+    --bg-dark: #001f4d;
+    --text-light: #001f4d;
+    --text-dark: #fdf6ec;
+    --primary: #0033a0;
+    --accent: #cdb991;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: all 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button, input[type="file"] {
+    margin-top: 10px;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.summary-box {
+    margin-top: 30px;
+    background: var(--accent);
+    padding: 20px;
+    border-radius: 10px;
+}

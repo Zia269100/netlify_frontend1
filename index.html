@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Academic PDF Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Academic PDF Summarizer</h1>
+
+        <button onclick="toggleTheme()">Toggle Theme</button>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdf" required>
+            <button type="submit">Summarize</button>
+        </form>
+
+        {% if summary %}
+        <div class="summary-box">
+            <h2>📝 Key Points:</h2>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
